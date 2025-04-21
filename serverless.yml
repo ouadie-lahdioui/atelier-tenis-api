@@ -1,0 +1,37 @@
+service: tennis-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: eu-west-1
+
+functions:
+  get-players:
+    handler: src/handlers/get-players.handler
+    description: Get a sorted list of players
+    events:
+      - http:
+          path: players
+          method: get
+  get-player-by-id:
+    handler: src/handlers/get-player-by-id.handler
+    description: Get a player by ID
+    events:
+      - http:
+          path: players/{id}
+          method: get
+  get-players-stats:
+    handler: src/handlers/get-players-stats.handler
+    description: Get a players stats
+    events:
+      - http:
+          path: players/stats
+          method: get
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+package:
+  individually: true
