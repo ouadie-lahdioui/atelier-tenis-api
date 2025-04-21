@@ -5,7 +5,7 @@
 - Serverless Framework: To simplify deploying and managing the applications on AWS
 - Node.js
 - TypeScript
-- AWS (ApiGateway, Lambda)
+- AWS Lambda
 - Jest: Testing framwork
 - Eslint To easly identify and fix code quality problemes.
 - Prettier Code formatter
