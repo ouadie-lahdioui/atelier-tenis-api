@@ -1,0 +1,12 @@
+# Outputs
+/dist
+/node_modules
+/build
+.build
+
+# OS
+.DS_Store
+
+# VSCode
+.vscode/*
+!.vscode/*
